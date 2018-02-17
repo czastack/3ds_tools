@@ -1,0 +1,2 @@
+../makerom -ciatocci file.cia
+python3 ../3ds_decrypt_v2.py file.cci
