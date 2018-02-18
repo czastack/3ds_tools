@@ -36,7 +36,7 @@ KeyX0x2C = struct.unpack('>QQ', b'\xB9\x8E\x95\xCE\xCA\x3E\x4D\x17\x1F\x76\xA9\x
 #KeyX0x25 = struct.unpack('>QQ', b'\x81\x90\x7A\x4B\x6F\x1B\x47\x32\x3A\x67\x79\x74\xCE\x4A\xD7\x1B') # Dev KeyX 0x25 (> 7.x)
 #KeyX0x2C = struct.unpack('>QQ', b'\x51\x02\x07\x51\x55\x07\xCB\xB1\x8E\x24\x3D\xCB\x85\xE2\x3A\x1D') # Dev KeyX 0x2C (< 6.x)
 
-with open(argv[1], 'rb+') as f, open('b2', 'wb') as gg:
+with open(argv[1], 'rb+') as f:
 
     def f_read(size):
         pos = f.tell()
