@@ -205,7 +205,8 @@ with open(argv[1], 'rb+') as f, open('b2', 'wb') as gg:
                             if (romfsSizeM > 0):
                                 for i in range(romfsSizeM):
                                     f.write(romfsctrmode.decrypt(f_read(1024*1024)))
-                                    print("\rPartition %1d RomFS: Decrypting: %4d / %4d mb" % (p, i, romfsSizeM + 1), end=' ')
+                                    if i & 3 == 0:
+                                        print("\rPartition %1d RomFS: Decrypting: %4d / %4d mb" % (p, i, romfsSizeM + 1), end=' ')
                             if (romfsSizeB > 0):
                                 f.write(romfsctrmode.decrypt(f_read(romfsSizeB)))
 
